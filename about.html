@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"
+/>
+    <title>About Me</title>
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+  
+    background-color: #0d0d0d;
+    color: white;
+    font-family: "Poppins", sans-serif
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    max-width: 600px;
+    flex: 1;
+    z-index: 1;
+}
+
+.about-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-title span {
+    color: #9b59b6;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #9b59b6;
+    font-weight: bold;
+}
+
+.activities-list {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.activities-list li {
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    color: #9b59b6;
+    margin-top: 20px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        margin-bottom: 30px;
+    }
+
+    .about-image img {
+        max-width: 80%;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    overflow-x: hidden;
+}
+
+.skills-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.skills-title span {
+    color: #9b59b6;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    justify-items: center;
+    align-items: center;
+}
+
+.skill-card {
+    background-color: transparent;
+    border: 2px solid #9b59b6;
+    border-radius: 12px;
+    padding: 50px; /* Increased padding for larger boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.skill-card img {
+    max-width: 80px; /* Increased icon size */
+    filter: invert(100%);
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    border-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 40px; /* Adjusted padding for smaller screens */
+    }
+
+    .skill-card img {
+        max-width: 70px; /* Adjusted icon size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 30px; /* Adjusted padding for smaller screens */
+    }
+
+    .skill-card img {
+        max-width: 60px; /* Adjusted icon size for smaller screens */
+    }
+}
+nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        color: rgb(162, 162, 240);
+        font-size: 1.02rem;
+      }
+
+      .left {
+        font-size: 1.5rem;
+      }
+
+      footer {
+        background-color:lightslategray;
+        color: #fff;
+        padding: 40px 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .left-section {
+        flex: 1;
+        min-width: 200px;
+        text-align: left;
+        margin-right: 40px;
+      }
+
+      .left-section h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .right-section {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        min-width: 600px;
+      }
+
+      .section {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .section li {
+        margin: 10px 0;
+      }
+
+      .section a {
+        color: #060606;
+        text-decoration: none;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+      }
+
+      .section a:hover {
+        color: #f6f0f0;
+      }
+
+      .follow-me h3 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+
+      .bottom-text {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #0d0d0e;
+      }
+      .footer {
+        background-color: purple;
+      }
+      .bottom-text p {
+        margin: 0;
+      }
+      .social-icon {
+        display: flex;
+        justify-content: center;
+      }
+      .social-icon a {
+        text-decoration: none;
+        padding: 10px;
+
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .social-icon a i {
+        font-size: 2em;
+        color: rgb(20, 17, 214);
+        opacity: 0.9;
+      }
+      .socialicon a:hover {
+        background-color: #111;
+        transition: 0.5s;
+      }
+      .social-icon a:hover i {
+        color: rgb(249, 243, 243);
+        transition: 0.5s;
+      }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="left">Om's portfolio</div>
+          <div class="right"></div>
+          <ul>
+            <li><a  href="index.html">Home</a></li>
+            <li><a class="active"a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </nav>
+      </header>
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h1 class="about-title">Know Who <span>I'M</span></h1>
+                <p class="about-text">
+                    Hi Everyone, I am <span class="highlight"> OM</span> from <span class="highlight"> Gujarat, India.</span>
+                  <br>  I'm currently Learning Full Stack Development 
+                  <br>I'm in <span class="highlight">4th Year</span> and pursuing my B.Tech Degree in IT branch from 
+                    <span class="highlight">Ahmedabad Institute of Technology (AIT)</span>.
+                </p>
+                <p class="about-text">
+                    Apart from coding, some other activities that I love to do:
+                </p>
+                <ul class="activities-list">
+                    <li>&#x1F4DA; Reading</li>
+                    <li>&#x1F3BE; In Sports - Volleyball</li>
+                    <li>&#x1F5FA; Travelling</li>
+                    <li>&#x1F3AE; Gaming</li>
+                </ul>
+
+            </div>
+            <div class="about-image">
+                <img src="img/about.jpg" alt="About Me Image">
+            </div>
+        </div>
+    </section>
+   
+        <section id="skills" class="skills-section">
+            <h2 class="skills-title">Professional <span>Skillset</span></h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="img/c.png" alt="C">
+                </div>
+               
+                <div class="skill-card">
+                    <img src="img/html.png" alt="HTML">
+                </div>
+                <div class="skill-card">
+                    <img src="img/css.png" alt="CSS">
+                </div>
+                <div class="skill-card">
+                    <img src="img/bootstrap.png" alt="Bootstrap">
+                </div>
+                <div class="skill-card">
+                    <img src="img/javascript.png" alt="JavaScript">
+                </div>
+                
+            </div>
+            </section>
+            <section id="skills" class="skills-section">
+            <h2 class="skills-title"><span>Tools</span> i use</h2>
+            <div class="skills-container">
+            <div class="skill-card">
+              <img src="img/win.png" alt="windows">
+              </div>
+              <div class="skill-card">
+                <img src="img/vs.png" alt="vscode">
+                </div>
+          </div>
+          </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+              <div class="left-section">
+                <h3>Om's Developer Portfolio</h3>
+              </div>
+              <div class="right-section">
+                <div class="section">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a  href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                  </ul>
+                </div>
+                <div class="footer-container">
+                  <div class="social-icon">
+                    <h3>Follow me :</h3>
+      
+                    <a href="https://x.com/Soni13062004?t=zYaXj5WktFLXRmZnGTtegA&s=09"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/om-soni-6425262a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="bottom-text">
+              <p>COPYRIGHT © | ALL RIGHTS RESERVED</p>
+            </div>
+          </footer>
+          
+        <script>
+          window.addEventListener('scroll', () => {
+    const skillCards = document.querySelectorAll('.skill-card');
+    const triggerBottom = window.innerHeight / 5 * 4;
+
+    skillCards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < triggerBottom) {
+            card.classList.add('show');
+        } else {
+            card.classList.remove('show');
+        }
+    });
+});
+
+        </script>
+    </body>
+</html>

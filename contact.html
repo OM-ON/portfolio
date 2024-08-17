@@ -1,0 +1,462 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        background-color: #f4f4f4;
+        margin:0;
+        padding:0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Contact Me Section Styles */
+      #contact-me {
+        background: linear-gradient(135deg, #95d92f, #0a4df7);
+        padding: 80px 20px;
+        text-align: center;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1px;
+      }
+
+      #contact-me h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+
+      #contact-me p {
+        font-size: 1.2em;
+        color: #e0e0e0;
+        margin-bottom: 40px;
+      }
+
+      .contact-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .contact-option {
+        display: inline-flex;
+        align-items: center;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: #fff;
+        background-color: #333;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .contact-option i {
+        margin-right: 15px;
+        font-size: 1.5em;
+      }
+
+      .contact-option:hover {
+        transform: translateY(-5px);
+        background-color: #555;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .whatsapp-link {
+        background-color: #25d366; /* WhatsApp green color */
+      }
+
+      .whatsapp-link:hover {
+        background-color: #1da351;
+      }
+
+      /* Contact Form Styles */
+      .contact-form {
+        background-color: #040507;
+        padding: 50px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .contact-form h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+      }
+
+      .contact-form h2 i {
+        margin-right: 10px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #ddd;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #555;
+        border-radius: 6px;
+        background-color: #222;
+        color: #fff;
+        font-size: 16px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"] {
+        height: 45px;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        height: 120px;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 12px;
+        background-color: #7e22c9;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #5b189a;
+      }
+
+      .error {
+        color: #ff4d4d;
+        font-size: 12px;
+        display: none;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        #contact-me h2 {
+          font-size: 2.2em;
+        }
+
+        .contact-option {
+          padding: 12px 25px;
+          font-size: 1em;
+        }
+
+        .contact-form {
+          padding: 40px 20px;
+        }
+
+        .contact-form h2 {
+          font-size: 24px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+          font-size: 14px;
+        }
+
+        .contact-form button {
+          font-size: 16px;
+        }
+      }
+      footer {
+        background-color:lightslategray;
+        color: #fff;
+        padding: 40px 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .left-section {
+        flex: 1;
+        min-width: 200px;
+        text-align: left;
+        margin-right: 40px;
+      }
+
+      .left-section h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .right-section {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        min-width: 600px;
+      }
+
+      .section {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .section li {
+        margin: 10px 0;
+      }
+
+      .section a {
+        color: #0e0e0f;
+        text-decoration: none;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+      }
+
+      .section a:hover {
+        color: #f3f1f1;
+      }
+
+      .follow-me h3 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+
+      .bottom-text {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #050505;
+      }
+      .footer {
+        background-color: purple;
+      }
+      .bottom-text p {
+        margin: 0;
+      }
+      .social-icon {
+        display: flex;
+        justify-content: center;
+      }
+      .social-icon a {
+        text-decoration: none;
+        padding: 10px;
+
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .social-icon a i {
+        font-size: 2em;
+        color: rgb(20, 17, 214);
+        opacity: 0.9;
+      }
+      .socialicon a:hover {
+        background-color: #111;
+        transition: 0.5s;
+      }
+      .social-icon a:hover i {
+        color: rgb(249, 243, 243);
+        transition: 0.5s;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100px;
+        background-color: rgb(18, 18, 62);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        color: rgb(162, 162, 240);
+        font-size: 1.02rem;
+      }
+
+      .left {
+        font-size: 1.5rem;
+        color:white;
+        padding:20px;
+        margin:12px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    
+    <header>
+      <nav>
+        <div class="left">Om's portfolio</div>
+        <div class="right"></div>
+        <ul>
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a  class="active" a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="contact-me">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          If you have any questions or just want to connect, feel free to reach
+          out to me !
+        </p>
+        <div class="contact-options">
+          <a href="mailto:om64312@gmail.com" class="contact-option">
+            <i class="fas fa-envelope"></i> Email Me
+          </a>
+          <a
+            href="https://wa.me/+919313812189?text=Hello%2C%20I%27d%20like%20to%20chat%20with%20you!"
+            class="contact-option whatsapp-link"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+        <div class="contact-form">
+          <h2><i class="fas fa-user"></i> Get in Touch</h2>
+          <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+            <input type="hidden" name="access_key" value="c5b3f26d-4c0e-4240-9e59-70c3994a7927">
+            <label>Name</label>
+              <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+              />
+              
+
+              <div class="error" id="nameError">Please enter your name</div>
+      
+              <label for="email">Email</label>
+              <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your email"
+                  required
+              />
+              <div class="error" id="emailError">Please enter a valid email</div>
+      
+              <label for="message">Message</label>
+              <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Your message"
+                  required
+              ></textarea>
+              <div class="error" id="messageError">Please enter your message</div>
+      
+              <button type="submit">Send Message</button>
+          </form>
+      </div>
+      
+         
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="left-section">
+          <h3>Om's Developer Portfolio</h3>
+        </div>
+        <div class="right-section">
+          <div class="section">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
+          <div class="footer-container">
+            <div class="social-icon">
+              <h3>Follow me :</h3>
+
+              <a href="https://x.com/Soni13062004?t=zYaXj5WktFLXRmZnGTtegA&s=09"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/om-soni-6425262a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-text">
+        <p>COPYRIGHT © | ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          let valid = true;
+
+          if (!document.getElementById("name").value) {
+            document.getElementById("nameError").style.display = "block";
+            valid = false;
+          } else {
+            document.getElementById("nameError").style.display = "none";
+          }
+
+          if (!document.getElementById("email").value) {
+            document.getElementById("emailError").style.display = "block";
+            valid = false;
+          } else {
+            document.getElementById("emailError").style.display = "none";
+          }
+
+          if (!document.getElementById("message").value) {
+            document.getElementById("messageError").style.display = "block";
+            valid = false;
+          } else {
+            document.getElementById("messageError").style.display = "none";
+          }
+
+          if (!valid) {
+            event.preventDefault();
+          }
+        });
+    </script>
+  </body>
+</html>

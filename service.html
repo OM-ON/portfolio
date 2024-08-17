@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Services</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .services-section {
+        padding: 80px 20px;
+        text-align: center;
+        background-color: #082654;
+        color: #ffffff;
+      }
+
+      .services-section h2 {
+        font-size: 42px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: relative;
+      }
+
+      .services-section h2::after {
+        content: "";
+        width: 60px;
+        height: 3px;
+        background-color: #007bff;
+        display: block;
+        margin: 10px auto;
+        border-radius: 5px;
+      }
+
+      .services-section p {
+        font-size: 18px;
+        color: #d1d1d1;
+        margin-bottom: 50px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+      }
+
+      .services-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .service-box {
+        background-color: #7fa61c;
+        border-radius: 15px;
+        padding: 40px;
+        max-width: 350px;
+        flex: 1;
+        text-align: left;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          background-color 0.3s ease;
+        overflow: hidden;
+      }
+
+      .service-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        background-color: #3a3f4b;
+      }
+
+      .service-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #007bff, #00c4ff);
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 0.6s ease;
+      }
+
+      .service-box:hover::before {
+        clip-path: circle(150% at 50% 50%);
+      }
+
+      .service-icon {
+        font-size: 50px;
+        color: #ffffff;
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .service-title {
+        font-size: 24px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+      }
+
+      .service-description {
+        font-size: 16px;
+        color: #d1d1d1;
+        line-height: 1.8;
+        position: relative;
+        z-index: 1;
+      }
+      footer {
+        background-color: lightslategray;
+        color: #fff;
+        padding: 40px 0;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .left-section {
+        flex: 1;
+        min-width: 200px;
+        text-align: left;
+        margin-right: 40px;
+      }
+
+      .left-section h3 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .right-section {
+        flex: 2;
+        display: flex;
+        justify-content: space-between;
+        min-width: 600px;
+      }
+
+      .section {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .section li {
+        margin: 10px 0;
+      }
+
+      .section a {
+        color: #131313;
+        text-decoration: none;
+        transition: color 0.3s;
+        display: flex;
+        align-items: center;
+      }
+
+      .section a:hover {
+        color: #f0f0f5;
+      }
+
+      .follow-me h3 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+
+      .bottom-text {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 0.9em;
+        color: #040404;
+      }
+      .footer {
+        background-color: purple;
+      }
+      .bottom-text p {
+        margin: 0;
+      }
+      .social-icon {
+        display: flex;
+        justify-content: center;
+      }
+      .social-icon a {
+        text-decoration: none;
+        padding: 10px;
+
+        margin: 10px;
+        border-radius: 50%;
+      }
+      .social-icon a i {
+        font-size: 2em;
+        color: rgb(20, 17, 214);
+        opacity: 0.9;
+      }
+      .socialicon a:hover {
+        background-color: #111;
+        transition: 0.5s;
+      }
+      .social-icon a:hover i {
+        color: rgb(249, 243, 243);
+        transition: 0.5s;
+      }
+      /* header */
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      nav ul li a:hover {
+        color: rgb(162, 162, 240);
+        font-size: 1.02rem;
+      }
+
+      .left {
+        font-size: 1.5rem;
+        color: white;
+        padding: 20px;
+        margin: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Om's portfolio</div>
+        <!-- <div class="right"></div> -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="service.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="services-section">
+      <h2>My Services</h2>
+      <p>
+        I offer a comprehensive suite of web development services to help you
+        create, optimize, and maintain your online presence.
+      </p>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-icon">🖥️</div>
+          <h3 class="service-title">Front-End Development</h3>
+          <p class="service-description">
+            Design and development of visually appealing, user-friendly, and
+            responsive websites using HTML, CSS, and JavaScript frameworks.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="service-icon">⚙️</div>
+          <h3 class="service-title">Back-End Development</h3>
+          <p class="service-description">
+            Creation of robust server-side logic, database management, and API
+            integration to power dynamic web applications.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="service-icon">📱</div>
+          <h3 class="service-title">Responsive Design</h3>
+          <p class="service-description">
+            Ensuring seamless user experience across all devices with a design
+            that adapts to various screen sizes and resolutions.
+          </p>
+        </div>
+        <div class="service-box">
+          <div class="service-icon">🚀</div>
+          <h3 class="service-title">Website Optimization</h3>
+          <p class="service-description">
+            Improving website performance, loading speeds, and search engine
+            rankings to enhance user satisfaction and visibility.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="left-section">
+          <h3>Om's Developer Portfolio</h3>
+        </div>
+        <div class="right-section">
+          <div class="section">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+          </div>
+          <div class="footer-container">
+            <div class="social-icon">
+              <h3>Follow me :</h3>
+
+              <a href="https://x.com/Soni13062004?t=zYaXj5WktFLXRmZnGTtegA&s=09"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/om-soni-6425262a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-text">
+        <p>COPYRIGHT © | ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+  </body>
+</html>
