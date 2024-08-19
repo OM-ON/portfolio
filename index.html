@@ -23,17 +23,20 @@
       * {
         margin: 0;
         padding: 0;
+        transition: all .3s;
       }
       body {
         background-color: rgb(0, 0, 33);
         color: white;
         font-family: "Poppins", sans-serif;
       }
-      nav {
+      /* nav {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 80px;
+        width: 100vw;
+        box-sizing: border-box;
         background-color: rgb(18, 18, 62);
       }
 
@@ -53,9 +56,76 @@
         color: rgb(162, 162, 240);
         font-size: 1.02rem;
       }
-
-      .left {
+      */
+      nav{
+        display: flex;
+        flex: 100vw;
+        /* justify-content: center; */
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+      }
+      nav .left {
+        flex:30vw;
         font-size: 1.5rem;
+        width: fit-content;
+        text-align: center;
+      } 
+      nav .right{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex: 70vw;
+      }
+       nav ul{
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         width: 40vw;
+       }
+       nav ul >li{
+        list-style: none;
+        margin: 0 .3rem;
+       }
+       nav ul li a {
+         color: white;
+         text-decoration: none;
+         transition: all .5s;
+         font-size: 1rem;
+        }
+      nav ul li a:hover {
+        color: rgb(162, 162, 240);       
+      }
+      @media only screen and (max-width: 918px) {
+        nav{
+          height: 60px;
+        }
+        nav .left {
+          flex: auto;
+          flex-shrink: 1;
+          font-size: 1rem;
+        }
+        nav .right {
+          flex: auto;
+        }
+        nav ul li a {
+          font-size: .7rem;
+        }
+        .firstSection{
+          flex-direction: column-reverse;
+          justify-content: center;
+        }
+        .firstSection >.LeftSection{
+          font-size: 1rem;
+        }
+        .firstSection > .LeftSection .btn{
+          font-size: 1rem;
+        }
+        .firstSection > .right-section img{
+          width: 100%;
+          margin:0;
+        }
       }
       .firstSection {
         display: flex;
@@ -1133,26 +1203,27 @@ footer {
     </style>
   </head>
   <body>
-    <div id="loading">
+    <!-- <div id="loading">
       <div class="loader">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
       </div>
-    </div>
+    </div> -->
 
     <header>
       <nav>
         <div class="left">Om's portfolio</div>
-        <div class="right"></div>
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact Me</a></li>
-        </ul>
+        <div class="right">
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
