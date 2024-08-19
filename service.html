@@ -9,6 +9,22 @@
     />
     <title>Services</title>
     <style>
+            @media only screen and (min-width: 768px) {
+      }
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 18px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
       body {
         font-family: "Poppins", sans-serif;
         background-color: #f0f4f8;
@@ -347,5 +363,15 @@
         <p>COPYRIGHT © | ALL RIGHTS RESERVED</p>
       </div>
     </footer>
+    <script>
+             function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+    </script>
   </body>
 </html>

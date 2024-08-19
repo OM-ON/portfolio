@@ -9,11 +9,30 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   />
     <style>
+      @media only screen and (min-width: 768px) {
+      }
+@media only screen and (max-width: 600px) {
+    .header {
+        font-size: 18px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f5f5f5;
+        width: 100%;
+        height: 100%;
+
       }
 
       .projects-section {
@@ -90,6 +109,8 @@
         background-color:lightslategray;
         color: #fff;
         padding: 80px 0;
+        bottom: 0;
+        left: 0;
         font-family: "Poppins", sans-serif;
       }
 
@@ -100,6 +121,7 @@
         justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
+       
       }
 
       .left-section {
@@ -243,7 +265,7 @@
           <div class="project-info">
             <h3>Project One</h3>
             <p></p>
-            <a href="C:\Magic Project" class="project-link">View Project</a>
+            <a href="https://magicshops.vercel.app" class="project-link">View Project</a>
           </div>
           Unleash your style with MAGIC – where every accessory tells your
           unique story . Discover the magic in every detail, from chic to
@@ -283,5 +305,16 @@
         <p>COPYRIGHT © | ALL RIGHTS RESERVED</p>
       </div>
     </footer>
+    <script>
+       function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+    </script>
   </body>
+
 </html>
