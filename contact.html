@@ -6,62 +6,36 @@
     />
 <meta name="viewport" content="width=device-width" ,initial-scale="1.0">
     <style>
-               @media (max-width: 768px) {
-            nav ul {
-
-                flex-direction: column;
-                padding: 10px;
-            }
-            .contact-form {
-            background: linear-gradient(135deg, #09d3c3, #865911);
-        padding: 80px 20px;
-        text-align: center;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        margin-bottom: 1px;
-            }
-            .footer {
-              
-        background-color:lightslategray;
-        color: #fff;
-        padding: 40px 0;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        bottom: 0;
-        left: 0;
-        font-family: "Poppins", sans-serif;
-      }
-            }
-        
-            @media (max-width: 480px) {
-              nav ul {
-
-flex-direction: column;
-padding: 5px; 
-}
-.contact-form {
-background: linear-gradient(135deg, #5009d3, #b3730c);
-padding: 80px 20px;
-text-align: center;
-border-radius: 15px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-margin-bottom: 1px;
-}
-.footer {
-
-background-color:lightslategray;
-color: #fff;
-padding: 40px 0;
-width: 100%;
-margin: 0;
-padding: 0;
-bottom: 0;
-left: 0;
-font-family: "Poppins", sans-serif;
-}
-}
-      
+               @media only screen and (max-width: 918px) {
+        nav{
+          height: 60px;
+        }
+        nav .left {
+          flex: auto;
+          flex-shrink: 1;
+          font-size: 1rem;
+        }
+        nav .right {
+          flex: auto;
+        }
+        nav ul li a {
+          font-size: .7rem;
+        }
+        .firstSection{
+          flex-direction: column-reverse;
+          justify-content: center;
+        }
+        .firstSection >.LeftSection{
+          font-size: 1rem;
+        }
+        .firstSection > .LeftSection .btn{
+          font-size: 1rem;
+        }
+        .firstSection > .right-section img{
+          width: 100%;
+          margin:0;
+        }
+               }
 
 
 
@@ -395,7 +369,7 @@ font-family: "Poppins", sans-serif;
     <header>
       <nav>
         <div class="left">Om's portfolio</div>
-        <div class="right"></div>
+        <div class="right">
         <ul>
           <li><a  href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -403,6 +377,7 @@ font-family: "Poppins", sans-serif;
           <li><a href="projects.html">Projects</a></li>
           <li><a  class="active" a href="contact.html">Contact Me</a></li>
         </ul>
+        </div>
       </nav>
     </header>
     <section id="contact-me">

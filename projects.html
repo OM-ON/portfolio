@@ -9,22 +9,36 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
   />
     <style>
-      @media only screen and (min-width: 768px) {
+      @media only screen and (max-width: 918px) {
+        nav{
+          height: 60px;
+        }
+        nav .left {
+          flex: auto;
+          flex-shrink: 1;
+          font-size: 1rem;
+        }
+        nav .right {
+          flex: auto;
+        }
+        nav ul li a {
+          font-size: .7rem;
+        }
+        .firstSection{
+          flex-direction: column-reverse;
+          justify-content: center;
+        }
+        .firstSection >.LeftSection{
+          font-size: 1rem;
+        }
+        .firstSection > .LeftSection .btn{
+          font-size: 1rem;
+        }
+        .firstSection > .right-section img{
+          width: 100%;
+          margin:0;
+        }
       }
-@media only screen and (max-width: 600px) {
-    .header {
-        font-size: 18px;
-    }
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-}
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
       body {
         font-family: "Poppins", sans-serif;
         margin: 0;
@@ -246,7 +260,7 @@
     <header>
       <nav>
         <div class="left">Om's portfolio</div>
-        <div class="right"></div>
+        <div class="right">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -254,6 +268,7 @@
           <li><a class="active" href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact Me</a></li>
         </ul>
+        </div>
       </nav>
     </header>
     <section id="projects" class="projects-section">
